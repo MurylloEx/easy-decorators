@@ -39,7 +39,7 @@ Take a look at the example below and see the practical application of the 4 type
 ```ts
 import { 
   EasyClassDecorator
-} from './decorators';
+} from '@muryllo/easy-decorators';
 
 const MyDecorator = () => EasyClassDecorator('my:key', { /* My metadata */ });
 
@@ -49,6 +49,8 @@ class Sample {
 }
 ```
 
+The example below shows how to use the 4 types of decorators.
+
 ```ts
 import { 
   EasyClassDecorator, 
@@ -56,7 +58,7 @@ import {
   EasyParameterDecorator, 
   EasyPropertyDecorator, 
   getEasyMetadata 
-} from './decorators';
+} from '@muryllo/easy-decorators';
 
 //Creating the decorators using a base decorator.
 const WebSockController = (addr: string) => EasyClassDecorator('ws:address', addr);
