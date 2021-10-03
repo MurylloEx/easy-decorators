@@ -23,7 +23,7 @@ Each decorator adds metadata that is stored in the instance of the class that ca
 ## Installation
 
 <p align="center">
-  <img src="https://nodei.co/npm/@muryllo/easy-decoradors?downloads=true&downloadRank=true&stars=true" alt="Installation"/>
+  <img src="https://nodei.co/npm/@muryllo/easy-decorators.png?downloads=true&downloadRank=true&stars=true" alt="Installation"/>
 </p>
 
 <p align="justify">You must run the following terminal command.<p>
@@ -96,3 +96,17 @@ The code above prints the following result:
   'ws:address': [ { key: null, value: 'ws://localhost:3000', type: 'class' } ]
 }
 ```
+
+## Metadata
+
+Muryllo Pimenta de Oliveira – muryllo.pimenta@upe.br
+
+Distributed under MIT license. See ``LICENSE`` for more informations.
+
+## Contributing
+
+1. Create a fork (<https://github.com/MurylloEx/easy-decorators/fork>)
+2. Create a feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Send a push of your commit (`git push origin feature/fooBar`)
+5. Open a new Pull Request
