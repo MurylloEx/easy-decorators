@@ -1,17 +1,19 @@
 {
   "name": "@muryllo/easy-decorators",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A simple library to create your own Typescript decorators and your mini-frameworks.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "prepublish": "tsc",
     "prepare": "tsc",
     "build": "tsc",
     "start": "ts-node src/index.ts"
   },
   "keywords": [
-    "decorators", 
-    "typescript", 
-    "easy", 
+    "decorators",
+    "typescript",
+    "easy",
     "metadata"
   ],
   "author": "Muryllo Pimenta de Oliveira",
