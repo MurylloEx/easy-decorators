@@ -59,7 +59,7 @@ export function EasyParameterDecorator(metadataKey: string, metadataValue: any):
       key: propertyKey, 
       value: metadataValue, 
       index: parameterIndex, 
-      type: 'method' 
+      type: 'parameter' 
     });
     setMetadata(target, 'easy:metadata', metadata);
   }
