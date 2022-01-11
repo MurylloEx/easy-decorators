@@ -22,7 +22,7 @@ describe("Method decorator tests", () => {
 
   test("check if class object has metadata", () => {
     const entries: EasyMetadataEntry<string>[] = getEasyMetadataEntries(new MyClass(), "class:test") || [];
-    expect(entries?.length).toBeGreaterThanOrEqual(1);
+    expect(entries.length).toBeGreaterThanOrEqual(1);
   });
 
   test("check if class object has correct metadata value", () => {
@@ -32,7 +32,7 @@ describe("Method decorator tests", () => {
 
   test("check if method has metadata", () => {
     const entries: EasyMetadataEntry<string>[] = getEasyMetadataEntries(new MyClass(), "method:test") || [];
-    expect(entries?.length).toBeGreaterThanOrEqual(1);
+    expect(entries.length).toBeGreaterThanOrEqual(1);
   });
 
   test("check if method has correct metadata value", () => {

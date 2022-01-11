@@ -36,7 +36,7 @@ export function getEasyMetadata<T = any>(target: any) {
 export function getEasyMetadataEntries<T = any>(target: any, metadataKey: string) {
   const metadata = getEasyMetadata(target) || {};
   return Array.isArray(metadata[metadataKey]) ? 
-    <EasyMetadataEntry<T>[]>(metadata[metadataKey]) : null;
+    <EasyMetadataEntry<T>[]>(metadata[metadataKey]) : [];
 }
 
 export function EasyClassDecorator<T = any>(metadataKey: string, metadataValue: T): ClassDecorator {

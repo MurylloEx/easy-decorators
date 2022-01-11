@@ -24,7 +24,7 @@ describe("Parameter decorator tests", () => {
 
   test("check if class object has metadata", () => {
     const entries: EasyMetadataEntry<string>[] = getEasyMetadataEntries(new MyClass(), "class:test") || [];
-    expect(entries?.length).toBeGreaterThanOrEqual(1);
+    expect(entries.length).toBeGreaterThanOrEqual(1);
   });
 
   test("check if class object has correct metadata value", () => {
@@ -44,7 +44,7 @@ describe("Parameter decorator tests", () => {
 
   test("check if parameter has metadata", () => {
     const entries: EasyMetadataEntry<string>[] = getEasyMetadataEntries(new MyClass(), "parameter:test") || [];
-    expect(entries?.length).toBeGreaterThanOrEqual(1);
+    expect(entries.length).toBeGreaterThanOrEqual(1);
   });
 
   test("check if parameter has correct metadata value", () => {
