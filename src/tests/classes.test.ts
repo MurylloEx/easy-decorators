@@ -2,7 +2,7 @@ import {
   EasyClassDecorator, 
   EasyMetadataEntry, 
   getEasyMetadataEntries 
-} from "../src";
+} from "../";
 
 describe("Class decorator tests", () => {
   

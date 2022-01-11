@@ -2,19 +2,21 @@ import {
   EasyClassDecorator, 
   EasyMetadataEntry, 
   EasyMethodDecorator, 
+  EasyParameterDecorator, 
   getEasyMetadataEntries
-} from "../src";
+} from "../";
 
-describe("Method decorator tests", () => {
+describe("Parameter decorator tests", () => {
   
   const ClassDecoratorTest = () => EasyClassDecorator<string>("class:test", "Test!");
   const MethodDecoratorTest = () => EasyMethodDecorator<string>("method:test", "Wohoo!");
+  const ParameterDecoratorTest = () => EasyParameterDecorator<string>("parameter:test", "Woow!");
 
   @ClassDecoratorTest()
   class MyClass {
 
     @MethodDecoratorTest()
-    public method(){
+    public method(@ParameterDecoratorTest() param: string){
       //Do something
     }
 
@@ -38,6 +40,16 @@ describe("Method decorator tests", () => {
   test("check if method has correct metadata value", () => {
     const entries: EasyMetadataEntry<string>[] = getEasyMetadataEntries(new MyClass(), "method:test") || [];
     expect(entries[0]?.value).toBe("Wohoo!");
+  });
+
+  test("check if parameter has metadata", () => {
+    const entries: EasyMetadataEntry<string>[] = getEasyMetadataEntries(new MyClass(), "parameter:test") || [];
+    expect(entries?.length).toBeGreaterThanOrEqual(1);
+  });
+
+  test("check if parameter has correct metadata value", () => {
+    const entries: EasyMetadataEntry<string>[] = getEasyMetadataEntries(new MyClass(), "parameter:test") || [];
+    expect(entries[0]?.value).toBe("Woow!");
   });
 
 });
